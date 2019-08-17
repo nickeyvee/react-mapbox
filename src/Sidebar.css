@@ -2,10 +2,20 @@
   background: #333333;
   color: white;
   height: 100%;
-  min-width: 250px;
+  width: 250px;
 }
 
 .search {
   border-radius: 3px;
   padding: 3px;
+  margin: 15px 0 15px 0;
+}
+
+.text-xs-center {
+  font-size: 12px;
+  text-align: center;
+}
+
+td {
+  cursor: pointer;
 }
