@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Mapbox
+
+After initializing your project locally you will need to create a new `mapbox-config.js` file in the src directory of the project containing your Mapbox API key:
+
+```
+export default 'YOUR_MAPBOX_API_KEY`
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
