@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactMapboxGl, { Layer, Marker, Popup } from "react-mapbox-gl"
+import ReactMapboxGl, { Marker, Popup } from "react-mapbox-gl"
 import accessToken from './mapbox-config'
 import mapMarker from './map_marker.png'
 
@@ -10,7 +10,7 @@ const Map = ReactMapboxGl({ accessToken })
 function MapContainer (props) {
   return (
     <Map
-      style="mapbox://styles/mapbox/streets-v9"
+      style="mapbox://styles/mapbox/streets-v9" // eslint-disable-line react/style-prop-object
       containerStyle={{
         height: "100vh",
         width: "100vw"
