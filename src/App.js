@@ -7,7 +7,7 @@ import Sidebar from './Sidebar'
 import accessToken from './mapbox-config'
 import './App.css'
 
-const baseClient = mbxClient({ accessToken: process.env.ACCESS_TOKEN || accessToken })
+const baseClient = mbxClient({ accessToken: process.env.REACT_APP_ACCESS_TOKEN || accessToken })
 const geocodingClient = geocoding(baseClient)
 
 function App() {
