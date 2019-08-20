@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactMapboxGl, { Marker, Popup } from "react-mapbox-gl"
-// import accessToken from './mapbox-config'
+import accessToken from './mapbox-config'
 import mapMarker from './map_marker.png'
 
 import './MapContainer.css'
 
-const Map = ReactMapboxGl({ accessToken: process.env.ACCESS_TOKEN })
+const Map = ReactMapboxGl({ accessToken: process.env.ACCESS_TOKEN || accessToken })
 // https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/
 function MapContainer (props) {
   return (
