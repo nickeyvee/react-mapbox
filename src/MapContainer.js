@@ -5,7 +5,7 @@ import mapMarker from './map_marker.png'
 
 import './MapContainer.css'
 
-const Map = ReactMapboxGl({ accessToken: process.env.ACCESS_TOKEN || accessToken })
+const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_ACCESS_TOKEN || accessToken })
 // https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/
 function MapContainer (props) {
   return (
