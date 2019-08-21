@@ -6,17 +6,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Mapbox
 
-After initializing your project locally you will need to create a new `mapbox-config.js` file in the src directory of the project containing your Mapbox API key:
+After initializing your project locally you will need to create a new `.env` file in the src directory of the project containing your Mapbox API key:
 
 ```
-export default 'YOUR_MAPBOX_API_KEY'
+REACT_APP_ACCESS_TOKEN=YOUR_MAPBOX_API_KEY
 ```
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run dev`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -28,6 +28,10 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm start`
+
+Will serve the production `build` folder created by `npm run build`
 
 ### `npm run build`
 
