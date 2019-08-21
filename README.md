@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Mapbox
 
-After initializing your project locally you will need to create a new `.env` file in the src directory of the project containing your Mapbox API key:
+After initializing your project locally you will need to create a new `.env` file in the root directory of the project containing your Mapbox API key:
 
 ```
 REACT_APP_ACCESS_TOKEN=YOUR_MAPBOX_API_KEY
