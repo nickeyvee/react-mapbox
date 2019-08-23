@@ -3,6 +3,7 @@ import mbxClient from '@mapbox/mapbox-sdk'
 import geocoding from '@mapbox/mapbox-sdk/services/geocoding'
 
 import MapContainer from './MapContainer'
+import Hamburger from './Hamburger'
 import Sidebar from './Sidebar'
 import './App.css'
 
@@ -28,31 +29,26 @@ function App() {
       })
   }
   return (
-    <div className="App">
-      <div className="hamburger" onClick={() => setNav(!nav)}>
-        <div></div>           
-        <div></div>           
-        <div></div>           
-      </div>    
-      { nav && <div className="sidebar">
-        <Sidebar
+    <div className="app" onClick={(e) => console.log(e.target)}>
+      <div className="positioned">
+      <Hamburger setNav={() => setNav(!nav)}/>
+      </div>
+      { nav && <Sidebar
           item={item}
           options={options}
           setItem={setItem}
           features={features}
           getCoord={getCoord}
+          setNav={() => setNav(!nav)}
         />
-      </div>
       }
-      <div>
-        <MapContainer
-          item={item}
-          options={options}
-          setItem={setItem}
-          features={features}
-          coord={coord}
-        /> 
-      </div>
+      <MapContainer
+        item={item}
+        options={options}
+        setItem={setItem}
+        features={features}
+        coord={coord}
+      />
     </div>
   )
 }

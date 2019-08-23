@@ -1,0 +1,24 @@
+
+.hamburger {
+  height: 50px;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  background: #333333;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0 20px 0;
+  width: 100px;
+}
+
+.hamburger div {
+  display: block;
+  border-radius: 5px;
+  background: grey;
+  height: 5px;
+  width: 50%;
+}

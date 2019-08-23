@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 import throttle from 'lodash.throttle'
 
+import Hamburger from './Hamburger'
+
 import './Sidebar.css'
 
 function Sidebar (props) {
@@ -15,9 +17,7 @@ function Sidebar (props) {
 
   return (
     <div className="container">
-      <div className="placeholder">
-        {/* PLACEHOLDER */}
-      </div>
+      <Hamburger setNav={props.setNav}/>      
       <input
         onChange={(e) => setValue(e.target.value)}
         placeholder="Search"
