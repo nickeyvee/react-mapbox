@@ -3,6 +3,10 @@
   display: flex;
 }
 
+.no-display {
+  display: none;
+}
+
 .positioned {
   position: absolute;
   top: 0;

@@ -34,7 +34,8 @@ function App() {
       <div className="positioned">
       <Hamburger setNav={() => setNav(!nav)}/>
       </div>
-      { nav && <Sidebar
+      <div className={!nav ? 'no-display' : 'display'}>
+        <Sidebar  
           item={item}
           options={options}
           search={search}
@@ -44,7 +45,7 @@ function App() {
           getCoord={getCoord}
           setNav={() => setNav(!nav)}
         />
-      }
+      </div>
       <MapContainer
         item={item}
         options={options}
