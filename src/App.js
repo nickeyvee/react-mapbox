@@ -15,6 +15,7 @@ function App() {
   const [bbox] = useState([-80.2913374215236, 26.7791550588799, -80.0653010128697, 26.9283759272279]) // Default
   const [options] = useState('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
   const [features, setFeatures] = useState([])
+  const [search, setSearch] = useState('restaurants')
   const [item, setItem] = useState(null)
   const [nav, setNav] = useState(false)
 
@@ -29,13 +30,15 @@ function App() {
       })
   }
   return (
-    <div className="app" onClick={(e) => console.log(e.target)}>
+    <div className="app">
       <div className="positioned">
       <Hamburger setNav={() => setNav(!nav)}/>
       </div>
       { nav && <Sidebar
           item={item}
           options={options}
+          search={search}
+          setSearch={setSearch}
           setItem={setItem}
           features={features}
           getCoord={getCoord}
