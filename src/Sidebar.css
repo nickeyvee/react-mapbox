@@ -1,22 +1,37 @@
 .container {
-  background: #333333;
-  overflow-y: scroll;
-  box-shadow: 5px 5px 20px grey;
-  color: white;
-  height: 100%;
-  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
 .search {
-  border-radius: 3px;
-  padding: 10px;
+  border-radius: 0;
+  width: 100%;
+  height:50px;
+  color: white;
+  background: rgb(105, 105, 105);
+  font-size: 20px;
   border: none;
   margin: 15px 0 15px 0;
 }
 
-.text-xs-center {
-  font-size: 12px;
+.search::placeholder {
+  color: white;
+}
+
+.placeholder {
+  padding: 10px;
+  height: 75px;
+}
+
+.text-styles {
+  font-size: 15px;
   text-align: center;
+}
+
+@media only screen and (max-width: 320px) {
+  .text-styles { 
+     font-size: 15px;
+  }
 }
 
 td {

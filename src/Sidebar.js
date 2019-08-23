@@ -15,6 +15,9 @@ function Sidebar (props) {
 
   return (
     <div className="container">
+      <div className="placeholder">
+        {/* PLACEHOLDER */}
+      </div>
       <input
         onChange={(e) => setValue(e.target.value)}
         placeholder="Search"
@@ -22,14 +25,14 @@ function Sidebar (props) {
         className="search"
         type="text"
       />
-      <table cellPadding="10">
+      <table cellPadding="12">
         <tbody>
           {props.features && props.features.map(
             (item, index) => (
               <tr
                 onMouseEnter={() => props.setItem({...item, index})}
                 onMouseLeave={() => props.setItem(null)}
-                className="text-xs-center"
+                className="text-styles"
                 key={`item-${index}`}
               >
                 <td

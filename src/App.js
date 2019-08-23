@@ -15,6 +15,7 @@ function App() {
   const [options] = useState('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
   const [features, setFeatures] = useState([])
   const [item, setItem] = useState(null)
+  const [nav, setNav] = useState(false)
 
   const getCoord = (query) => {
     if (!query) { return }
@@ -28,7 +29,12 @@ function App() {
   }
   return (
     <div className="App">
-      <div className="sidebar">
+      <div className="hamburger" onClick={() => setNav(!nav)}>
+        <div></div>           
+        <div></div>           
+        <div></div>           
+      </div>    
+      { nav && <div className="sidebar">
         <Sidebar
           item={item}
           options={options}
@@ -37,6 +43,7 @@ function App() {
           getCoord={getCoord}
         />
       </div>
+      }
       <div>
         <MapContainer
           item={item}
