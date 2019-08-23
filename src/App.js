@@ -17,15 +17,12 @@ function App() {
   const [item, setItem] = useState(null)
 
   const getCoord = (query) => {
-    if (!query) {
-      return console.log('Search Empty, Exiting...')
-    }
+    if (!query) { return }
     geocodingClient.forwardGeocode({
       query, bbox, limit: 10
     })
       .send()
       .then(({ body }) => {
-        console.log(body)
         setFeatures(body.features)
       })
   }
