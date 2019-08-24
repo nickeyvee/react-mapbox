@@ -11,13 +11,14 @@ const baseClient = mbxClient({ accessToken: process.env.REACT_APP_ACCESS_TOKEN }
 const geocodingClient = geocoding(baseClient)
 
 function App() {
-  const [coord] = useState([-80.1386, 26.8234]) // Default (Palm Beach Gardens)
+  const [coord] = useState([-80.1146312, 26.8238525])
   const [bbox] = useState([-80.2913374215236, 26.7791550588799, -80.0653010128697, 26.9283759272279]) // Default
   const [options] = useState('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
   const [features, setFeatures] = useState([])
   const [search, setSearch] = useState('restaurants')
   const [item, setItem] = useState(null)
   const [nav, setNav] = useState(false)
+  const [zoom] = useState([12])
 
   const getCoord = (query) => {
     if (!query) { return }
@@ -51,6 +52,7 @@ function App() {
         options={options}
         setItem={setItem}
         features={features}
+        zoom={zoom}
         coord={coord}
       />
     </div>

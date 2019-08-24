@@ -14,7 +14,7 @@ function MapContainer (props) {
         height: "100vh",
         width: "100vw"
       }}
-      zoom={[12]}
+      zoom={props.zoom}
       center={props.coord}
     >
       {props.features && props.features.map((item, index) => (
