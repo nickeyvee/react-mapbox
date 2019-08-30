@@ -16,6 +16,7 @@ function MapContainer (props) {
       }}
       zoom={props.zoom}
       center={props.coord}
+      maxBounds={props.bbox}
     >
       {props.features && props.features.map((item, index) => (
         <Marker
