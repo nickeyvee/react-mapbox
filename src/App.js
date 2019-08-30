@@ -26,7 +26,6 @@ function App() {
     })
       .send()
       .then(({ body }) => {
-        console.log(body)
         setFeatures(body.features)
       })
   }
